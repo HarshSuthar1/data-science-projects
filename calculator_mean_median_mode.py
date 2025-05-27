@@ -1,3 +1,5 @@
+from collections import Counter
+
 def mean(x):
     return sum(x)/len(x)
 
@@ -9,7 +11,9 @@ def median(x):
         return (sorted_x[len(x)//2] + sorted_x[(len(x)//2)-1]) / 2
 
 def mode(x):
-    return max(x)
+    counts = Counter(x)
+    max_count = max(counts.values())
+    return [x_i for x_i, count in counts.items() if count == max_count]
 
 length = int(input("Enter how many numbers u want: "))
 
