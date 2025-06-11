@@ -28,7 +28,7 @@ choice = int(input('''1. Mean
 2. Median
 3. Mode\n'''))
 
-if choice == 1:
+if choice == 1: 
     print(mean(data))
 if choice == 2:
     print(median(data))
